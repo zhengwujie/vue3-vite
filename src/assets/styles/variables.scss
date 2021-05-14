@@ -1,0 +1,63 @@
+$haderH: 120px;
+$navH: 55px;
+$border-radius: 4px; //设置圆角
+
+$primary: #409eff; // 各种颜色
+$success: #67c23a;
+$warning: #e6a23c;
+$danger: #f56c6c;
+$info: #909399;
+
+$primary-hover: #66b1ff; // 鼠标移入的颜色
+$success-hover: #85ce61;
+$warning-hover: #ebb563;
+$danger-hover: #f78989;
+$info-hover: #a6a9ad;
+
+$primary-active: #3a8ee6; // 激活的颜色
+$success-active: #5daf34;
+$warning-active: #cf9236;
+$danger-active: #dd6161;
+$info-active: #82848a;
+
+$imgUrl: "~@/assets/image";
+
+$navH: 2px;
+$subMenuBg: $navH;
+$menuHover: #fff;
+$mainColor: #ccc;
+$primaryColor: #ccc;
+// 多行省略
+@mixin ellipsis($num: 1) {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: $num;
+  -webkit-box-orient: vertical;
+}
+
+@mixin borderRadius($value: $border-radius) {
+  -webkit-border-radius: $value;
+  -moz-border-radius: $value;
+  border-radius: $value;
+}
+
+@mixin utilBtn {
+
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  position: relative;
+
+  cursor: pointer;
+  &:hover {
+    opacity: 0.9;
+  }
+  &:active {
+    opacity: 0.8;
+  }
+}
+
+
