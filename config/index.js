@@ -1,6 +1,6 @@
 const environmentConfiguration = {
   development: {
-    baseUrl: '/api' // 测试接口域名
+    baseUrl: 'http://192.168.0.239:8086/date-web-api' // 测试接口域名
   },
   beta: {
     baseUrl: 'xxxx'
@@ -12,6 +12,4 @@ const environmentConfiguration = {
   }
 }
 
-export default {
-  environmentConfiguration:environmentConfiguration[import.meta.env.MODE]
-}
+export default environmentConfiguration[import.meta.env.MODE]

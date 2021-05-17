@@ -1,4 +1,4 @@
 // 常量
 export default {
-    demo: 'demo'
+    demo: 'demo test'
 }

@@ -2,7 +2,7 @@
 import request from './request'
 export default {
     //demo
-    demo(params) {
-        return request.get('/list', {params: params})
+    appLogin(params) {
+        return request.post('/app/login', params)
     },
 }

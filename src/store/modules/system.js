@@ -5,7 +5,8 @@ const user = {
     refreshToken: '',
     userInfo: '', // 用户信息
     avatar: '',
-    nickName: ''
+    nickName: '',
+    authority:'' //会员级别
   },
   mutations: {
     UPDATE_CTOKEN(state, ctoken) {
@@ -22,6 +23,9 @@ const user = {
     },
     UPDATE_NICKNAME(state, nickName) {
       state.nickName = nickName
+    },
+    UPDATE_AUTHORITY(state, authority) {
+      state.authority = authority
     }
   },
   actions: {
@@ -39,6 +43,9 @@ const user = {
     },
     UpdateNickName({ commit }, data) {
       commit('UPDATE_NICKNAME', data)
+    },
+    UpdateAuthority({ commit }, data) {
+      commit('UPDATE_AUTHORITY', data)
     }
   }
 }

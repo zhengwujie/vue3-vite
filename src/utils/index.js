@@ -1,16 +1,17 @@
-import $request from './request'
-import $common from './main'
+import $api from './api'
 import $constant from './constant'
 import $ext from './ext'
-import $api from './api'
+import $common from './main'
+import $mixins from './mixins'
 import $tokenUtils from './token-utils'
-
+import $validate from './validate'
 
 export default {
-  $ext,
   $api,
-  $request,
-  $common,
   $constant,
-  $tokenUtils
+  $ext,
+  $common,
+  $mixins,
+  $tokenUtils,
+  $validate
 }

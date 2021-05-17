@@ -1,0 +1,8 @@
+.el-input__inner{
+    height: 44px!important;
+    background:none;
+}
+.el-input__inner:focus {
+    outline: none;
+    border-color: red !important;
+}
