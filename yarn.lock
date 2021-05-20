@@ -1105,6 +1105,10 @@ csstype@^2.6.8:
   resolved "https://registry.yarnpkg.com/csstype/-/csstype-2.6.17.tgz#4cf30eb87e1d1a005d8b6510f95292413f6a1c0e"
   integrity sha512-u1wmTI1jJGzCJzWndZo8mk4wnPTZd1eOIYTYvuEyOQGfmDl3TrabCCfKnOC86FZwW/9djqTl933UF/cS425i9A==
 
+"customer-base-components@http://192.168.0.11:10080/web-front-end/customer-base-components.git":
+  version "1.0.0"
+  resolved "http://192.168.0.11:10080/web-front-end/customer-base-components.git#25062a2ad4e9691898582c7c4cb3e36c78dfadb9"
+
 dayjs@1.x:
   version "1.10.4"
   resolved "https://registry.yarnpkg.com/dayjs/-/dayjs-1.10.4.tgz#8e544a9b8683f61783f570980a8a80eaf54ab1e2"

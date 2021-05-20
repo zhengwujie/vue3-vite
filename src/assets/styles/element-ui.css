@@ -1,8 +1,30 @@
-.el-input__inner{
+.login-body .el-input__inner{
     height: 44px!important;
     background:none;
 }
-.el-input__inner:focus {
+.login-body .el-input__inner:focus {
     outline: none;
     border-color: red !important;
+}
+
+.el-table th { background-color: #f5f7fa !important; color: #606266 !important;text-align: center!important;}
+.el-table td{
+    text-align: center!important;
+}
+.el-form--inline .el-form-item{
+    margin-right: 30px!important;
+}
+.el-table thead{
+    font-size: 15px;
+}
+.el-table--mini th{
+    padding:10px 0!important;
+}
+
+.translations .table .el-input__inner{
+    border:0!important;
+    background: none!important;
+}
+.translations .table .el-input__inner:focus{
+    border:1px solid #409EFF!important;
 }

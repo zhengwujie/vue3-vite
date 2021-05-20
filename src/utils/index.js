@@ -5,6 +5,7 @@ import $common from './main'
 import $mixins from './mixins'
 import $tokenUtils from './token-utils'
 import $validate from './validate'
+import $elUtils from './el-utils'
 
 export default {
   $api,
@@ -13,5 +14,6 @@ export default {
   $common,
   $mixins,
   $tokenUtils,
-  $validate
+  $validate,
+  $elUtils
 }

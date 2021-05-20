@@ -23,7 +23,7 @@ export default ({ mode }) =>  defineConfig({
       }
     ])
   ],
-  base: baseUrl[mode],
+  // base: baseUrl[mode],
   resolve: {
     alias: {
       '~': path.resolve(__dirname, './'),
@@ -32,11 +32,11 @@ export default ({ mode }) =>  defineConfig({
   },
   server: {
     proxy: {
-      // '/api': {
-      //   target: 'http://backend-api-02.newbee.ltd/manage-api/v1',
-      //   changeOrigin: true,
-      //   rewrite: path => path.replace(/^\/api/, '')
-      // }
+      '/app': {
+        target: 'http://192.168.0.239:8086/date-web-api',
+        // changeOrigin: true,
+        rewrite: path => path.replace(/^\/app/, '')
+      }
     }
   }
 })

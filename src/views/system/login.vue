@@ -24,22 +24,16 @@
 <script>
 import md5 from 'js-md5'
 import {reactive, ref, toRefs, getCurrentInstance} from 'vue'
-// import { localSet } from '@/utils'
-// import {ElMessage} from 'element-plus'
+import $elUtils from "../../utils/el-utils";
+
 export default {
   name: 'Login',
   setup() {
 
-    /* 全局挂载 start */
+    /* 全局挂载utils工具类 start */
     const {proxy} = getCurrentInstance()
-    const $constant = proxy.$constant
-    const $api = proxy.$api
-    const $common = proxy.$common
-    const $validate = proxy.$validate
-    const ElMessage = proxy.ElMessage
-    const $router = proxy.$router
-    console.log('$router', $router)
-    console.log($api)
+    const {$api, $common, $validate, $router, $elUtils} = proxy
+
     /* 全局挂载 end */
 
     const loginForm = ref(null)
@@ -60,6 +54,10 @@ export default {
     })
     const submitForm = async () => {
       console.log('state.ruleForm', state.ruleForm)
+      if ($validate.isNull(state.ruleForm.username) || $validate.isNull(state.ruleForm.password)) {
+        $elUtils.warnMsg('Account or password is not correct, please check.')
+        return
+      }
       const paramObj = {
         account: state.ruleForm.username || '',
         userPassword: md5(state.ruleForm.password),
@@ -67,16 +65,14 @@ export default {
       }
       $api.appLogin(paramObj).then((res) => {
         if (res.code == 0 && !$validate.isNull(res.data)) {
-          res.data.authority && $common.setKeyVal('system', 'authority', res.data.authority)
-          console.log($router)
+          res.data.authority && $common.setKeyVal('system', 'authority', res.data.authority, true)
           $router.push({name: 'TranslationsIndex'})
+          $elUtils.successMsg('login success!!')
+        } else {
+          $elUtils.errorMsg(res.message)
         }
-        console.log('res', res)
       }).catch((err) => {
-        ElMessage({
-          message: err.message,
-          type: 'error'
-        })
+        $elUtils.errorMsg(err.message)
       })
 
     }

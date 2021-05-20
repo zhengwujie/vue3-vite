@@ -7,7 +7,7 @@
 //}
 * {
   box-sizing: border-box;
-  font-family: 'Open Sans',微软雅黑, Helvetica, Helvetica Neue, Arial, 黑体,sans-serif;
+  font-family: Arial, "Microsoft YaHei", "SimSun";
 }
 html,body,div,span,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,abbr,address,cite,code,del,dfn,em,img,ins,kbd,q,samp,small,strong,sub,sup,var,b,i,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,figcaption,figure,footer,header,hgroup,menu,nav,section,summary,time,mark,audio,video {
   margin:0;
@@ -20,6 +20,12 @@ html,body,div,span,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,abbr,address
 vertical-align:baseline;
 background:transparent;
 */
+}
+body{
+  color: #444;
+  font-size: 14px;
+  line-height: 14px;
+  letter-spacing: 1px;
 }
 h1,h2,h3,h4,h5,h6,em,i {
   font-weight:100;
@@ -121,3 +127,21 @@ div:focus{
 }
 
 
+/* 设置滚动条的样式 */
+::-webkit-scrollbar {
+  width:8px;
+}
+/* 滚动槽 */
+::-webkit-scrollbar-track {
+  -webkit-box-shadow:inset006pxrgba(0,0,0,0.3);
+  border-radius:10px;
+}
+/* 滚动条滑块 */
+::-webkit-scrollbar-thumb {
+  border-radius:10px;
+  background:rgba(0,0,0,0.1);
+  -webkit-box-shadow:inset006pxrgba(0,0,0,0.5);
+}
+//::-webkit-scrollbar-thumb:window-inactive {
+//  background:rgba(255,0,0,0.4);
+//}

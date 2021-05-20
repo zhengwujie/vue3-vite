@@ -35,7 +35,7 @@ import App from './App.vue'
 
 
 // 修改后的主题样式必须放在最后面
-import '../theme/index.css'
+// import '../theme/index.css'
 
 // 业务样式
 import '@/assets/styles/index.scss'
@@ -59,8 +59,14 @@ import $router from '@/router/index'
 
 app.use($router)
 
-import PageFrame from '@/component/layout/page-frame'
+import PageFrame from '@/component/layout/page-frame.vue'
 app.component('PageFrame', PageFrame)
+
+// 引入组件库组件
+import customerBaseComponents from 'customer-base-components'
+Object.keys(customerBaseComponents).forEach(key => {
+    app.component(key, customerBaseComponents[key])
+})
 
 app.use(ElButton)
     .use(ElContainer)

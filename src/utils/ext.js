@@ -20,11 +20,11 @@ export default {
         // common.setKeyVal('system', 'userInfo', {}, true)
         // common.setKeyVal('system', 'avatar', '', true)
         // common.setKeyVal('system', 'nickName', '', true)
+        common.setKeyVal('system', 'authority', '', true)
         router.push({ name: 'Login' })
         ElMessage({
             type: 'success',
             message: 'login out success!'
         })
-        // return Promise.resolve()
     },
 }

@@ -3,12 +3,10 @@
     <div class="content">
       <slot />
     </div>
-<!--    <page-footer />-->
   </div>
 </template>
 
 <script>
-// import pageFooter from '@/views/system/layout/page-footer'
 export default {
   name: 'PageFrame',
   components: {  },
